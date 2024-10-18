@@ -2,6 +2,7 @@
 <div class="form-container">
         <form id="registroForm" action="#" method="POST" novalidate>
             <h2>Login</h2>
+            <label for="apellido">Apellido</label>
             
             <!-- Número de control -->
             <label for="nombre">Número de Control:</label>
@@ -21,7 +22,10 @@
     </div>
 
 </template>
+<script>
 
+
+</script>
 <style>
 * {
     box-sizing: border-box;
