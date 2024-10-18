@@ -1,5 +1,0 @@
-<template>
-ndiwdwdijwodijwodj
-
-
-</template>

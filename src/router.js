@@ -1,24 +1,24 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Principal from './components/Principal.vue';
+import Home from './View/Home.vue';
 
 
 
 const routes = [
   {
-    
+
     path: '/',
     name: 'home',
-    component: Principal
-  
-},
-{
-    
+    component: Home
+
+  },
+  {
+
     path: '/registro',
     name: 'Registro',
-    component: () => import(/* webpackChunkName: "about" */ '../src/components/registro.vue')
-    
-}
+    component: () => import(/* webpackChunkName: "about" */ './components/TSJcommunity.component/registro.vue')
+
+  }
 ];
 
 const router = createRouter({
