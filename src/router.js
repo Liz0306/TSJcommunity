@@ -1,24 +1,32 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import Home from './View/Home.vue';
-
-
-
+import TSJ_Community from './View/TSJ_Community.vue';
+import RegistroUsuario from './View/registro.vue'
+import StudentLogin from './View/login.vue'
 const routes = [
   {
-
     path: '/',
     name: 'home',
     component: Home
-
   },
   {
+    path: '/communityTSJZ',
+    name: 'communityTSJZ',
+    component: TSJ_Community,
+    children: [{
+      path: 'register',
+      name: 'register',
+      component: RegistroUsuario
+    },
+    {
+      path: 'login',
+      name: 'StudentLogin',
+      component: StudentLogin
+    }
+    ]
+  },
 
-    path: '/registro',
-    name: 'Registro',
-    component: () => import(/* webpackChunkName: "about" */ './components/TSJcommunity.component/registro.vue')
-
-  }
 ];
 
 const router = createRouter({
