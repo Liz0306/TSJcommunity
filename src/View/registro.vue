@@ -21,6 +21,26 @@
               <input type="text" id="phone" v-model="phone" required />
             </div>
             <div class="form-group">
+              <label for="tieneCarro">Tienes carro </label>
+              <input type="radio" v-model="hasCar" value="yes"/>Si
+              <input type="radio" v-model="hasCar" value="no"/>No
+
+              <div v-if="hasCar">
+              <p>Has seleccionado: {{ hasCar === 'yes' ? 'Sí' : 'No' }}</p>
+              </div>
+            </div>
+            <div v-if="hasCar =='yes'">
+              <h2>Datos del automovil</h2>
+                <label for="modelo">Modelo</label>
+                <input type="text" id="modelo" v-model="modelo" required />
+                <label for="año">Año</label>
+                <input type="text" id="año" v-model="año" required />
+                <label for="color">Color</label>
+                <input type="text" id="color" v-model="color" required />
+                <label for="capacidad">Capacidad</label>
+                <input type="text" id="capacidad" v-model="capacidad" required />
+            </div>
+            <div class="form-group">
               <label for="password">Contraseña</label>
               <input type="password" id="password" v-model="password" required />
             </div>
@@ -28,6 +48,7 @@
               <label for="confirmpassword">Confirmar contraseña</label>
               <input type="password" id="confirmpassword" v-model="confirmpassword" required />
             </div>
+           
             <button type="submit" class="btn">Registrarse</button>
           </form>
           <p>¿Ya tienes una cuenta? <router-link to="/login">Inicia sesión aquí</router-link></p>
@@ -50,7 +71,8 @@
         email: '',
         phone: '',
         password: '',
-        confirmpassword:''
+        confirmpassword:'',
+        hasCar: ''
       };
     },
     methods: {
@@ -90,7 +112,7 @@
     }
   };
   </script>
-  
+
   <style scoped>
   /* Página de registro */
   .register-page {
