@@ -2,8 +2,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import Home from './View/Home.vue';
 import TSJ_Community from './View/TSJ_Community.vue';
-import RegistroUsuario from './View/registro.vue'
-import StudentLogin from './View/login.vue'
+import RegistroUsuario from './View/registro.vue';
+import StudentLogin from './View/login.vue';
+import BecasViw from './View/BecasApartado.vue';
 const routes = [
   {
     path: '/',
@@ -26,6 +27,11 @@ const routes = [
     }
     ]
   },
+  {
+    path: '/Becas',
+    name: 'Becas',
+    component: BecasViw,
+  }
 
 ];
 

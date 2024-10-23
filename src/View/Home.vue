@@ -24,7 +24,7 @@
             </li>
     
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">EDCORE</a>
+              <a class="nav-link active" aria-current="page" href="https://edcore.tecmm.mx/alum/login.jsp" target="_blank" rel="noopener noreferrer">EDCORE</a>
             </li>
     
             <li class="nav-item">
@@ -32,7 +32,7 @@
             </li>
             
             <li class="nav-item">
-              <a class="nav-link" href="#">Becas</a>
+              <router-link class="nav-link" to="/Becas">Becas</router-link>
             </li>
     
             <li class="nav-item">
@@ -68,7 +68,7 @@
           <img src="../assets/imgPrincipal2.jpg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="../assets/imgPrincipal.png" class="d-block w-100" alt="...">
+          <img src="../assets/slider3.jpg" class="d-block w-100" alt="...">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -82,13 +82,24 @@
     </div>
     
     
-    <FooterMain></FooterMain>
+    
     </template>
     
     <!-- Add "scoped" attribute to limit CSS to this component only -->
     <style scoped>
-    
-    
+
+   
+
+
+
+
+
+@media (max-width: 600px) {
+  .row {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
     
     
     
@@ -109,14 +120,10 @@
     </style>
     
     <script>
-    import FooterMain from '../components/footer.component.vue'
     export default {
       name: 'HelloWorld',
       props: {
         msg: String
-      },
-      components:{
-        FooterMain
       }
     
     

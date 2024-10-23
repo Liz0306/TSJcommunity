@@ -8,12 +8,12 @@
         <li><a href="">Sobre nosotros</a></li>
         <li><a href="">Raite</a></li>
         <li><a href="">Compra y venta</a></li>
-        <li  v-if="isAuthenticated">
-          <router-link to="/profile">Mi Perfil</router-link>
+        <li>
+          <a href="">Perfil</a>
           <ul class="submenu">
             <li><router-link to="/profile">Mi Perfil</router-link></li>
             <li><a href="">Configuración</a></li>
-            <li @click="logout"><router-link to="/communityTSJZ">Cerrar sesión</router-link></li>
+            <li @click="logout"><router-link to="/profile">Cerrar sesión</router-link></li>
           </ul>
         </li>
       </ul>
@@ -29,11 +29,10 @@
 </template>
 
 <script>
-import  EventBus from '../eventBus';
 export default {
   data() {
     return {
-   
+      isAuthenticated: !!localStorage.getItem('token'), // Inicializa el estado
     };
   },
   name: 'TSJ_Community',
@@ -42,14 +41,7 @@ export default {
       localStorage.removeItem('token');
       this.isAuthenticated = false;
       this.$router.push('/communityTSJZ/login');
-    },
-    handleUserLoggedIn() {
-    this.isAuthenticated = true; 
-
-  }
-  },
-  mounted(){
-    EventBus.on('userLoggedIn',this.handleUserLoggedIn);
+    }
   }
 }
 </script>
