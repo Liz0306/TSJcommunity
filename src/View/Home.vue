@@ -85,6 +85,7 @@
     <tarjetaMain></tarjetaMain>
 
     <UbicacionMain></UbicacionMain>
+
     
     <FooterMain></FooterMain>
     
@@ -128,6 +129,7 @@
     import FooterMain from '../components/footer.component.vue'
     import tarjetaMain from '../components/tarjetas.vue'
     import UbicacionMain from '../components/UbicacionEscuela.vue'
+    
     export default {
       name: 'HelloWorld',
       props: {
@@ -136,7 +138,8 @@
       components:{
         FooterMain,
         tarjetaMain,
-        UbicacionMain
+        UbicacionMain,
+      
       }
     
     
