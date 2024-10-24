@@ -63,7 +63,7 @@
 
 <script>
 export default {
-  name: 'PostForm', 
+  name: 'PUblicMain', 
   data() {
     return {
       postContent: '',
