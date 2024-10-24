@@ -6,7 +6,7 @@
         <li v-if="!isAuthenticated"><router-link to="/communityTSJZ/login" aria-current="page">Inicia Sesión</router-link></li>
         <li v-if="!isAuthenticated"><router-link to="/communityTSJZ/register" aria-current="page">Registrate</router-link></li>
         <li><a href="">Sobre nosotros</a></li>
-        <li><a href="">Raite</a></li>
+        <li><router-link to="/Raite">Raite</router-link></li>
         <li><a href="">Compra y venta</a></li>
         <li  v-if="isAuthenticated">
           <router-link to="/profile">Mi Perfil</router-link>

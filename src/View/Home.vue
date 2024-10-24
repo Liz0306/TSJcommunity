@@ -80,7 +80,12 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-    
+
+
+    <tarjetaMain></tarjetaMain>
+
+    <UbicacionMain></UbicacionMain>
+
     
     <FooterMain></FooterMain>
     </template>
@@ -121,13 +126,19 @@
     
     <script>
     import FooterMain from '../components/footer.component.vue'
+    import tarjetaMain from '../components/tarjetas.vue'
+    import UbicacionMain from '../components/UbicacionEscuela.vue'
+    
     export default {
       name: 'HelloWorld',
       props: {
         msg: String
       },
       components:{
-        FooterMain
+        FooterMain,
+        tarjetaMain,
+        UbicacionMain,
+      
       }
     
     
